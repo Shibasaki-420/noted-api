@@ -1,71 +1,44 @@
-# noted-api README
+# Noted API
 
-This is the README for your extension "noted-api". After writing up a brief description, we recommend including the following sections.
+将你的笔记和API通过简洁的方式绑定在一起。
 
-## Features
+## 效果预览
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### 为API创建笔记
 
-For example if there is an image subfolder under your extension project workspace:
+对于新学习的API，可以快速为其创建笔记，记录此API的使用方法和特性。
 
-\!\[feature X\]\(images/feature-x.png\)
+![](demo/create-note.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### 打开API的笔记
 
-## Requirements
+对于编辑器光标处指向的API，如果已有笔记，可以直接打开。推荐为此命令绑定趁手的快捷键。
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![](demo/open-note.gif)
 
-## Extension Settings
+### 查看API的悬停提示
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+笔记将为对应的API提供悬停提示，以方便浏览数月之前的项目代码。
 
-For example:
+![](demo/hint.gif)
 
-This extension contributes the following settings:
+### 根据笔记简介搜索API
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+笔记的第3行将成为API的简介。在搜索API时，即使想不起API的名称，还可以根据简介片段搜索。
 
-## Known Issues
+![](demo/search-note.gif)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### 切换文档
 
-## Release Notes
+根据需要，可以将笔记保存在不同的文档中，并随时切换当前文档。
 
-Users appreciate release notes as you update your extension.
+## 设置
 
-### 1.0.0
+| 配置项             | 描述             |
+| ------------------ | ---------------- |
+| docDir             | 文档存放的路径。 |
+| defaultSelectedDoc | 默认选择的文档。 |
 
-Initial release of ...
+## Enjoy!
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+config

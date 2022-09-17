@@ -13,6 +13,10 @@
     "*"
   ],
   "icon": "images/noted-api-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shibasaki-420/noted-api"
+  },
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -27,6 +31,10 @@
       {
         "command": "noted-api.createNewNote",
         "title": "Noted API: create new note"
+      },
+      {
+        "command": "noted-api.refreshNoteList",
+        "title": "Noted API: refresh note list"
       },
       {
         "command": "noted-api.openNoteAtCursor",
