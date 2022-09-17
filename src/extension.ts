@@ -58,6 +58,12 @@ export function activate(context: vscode.ExtensionContext) {
 		picks = pickFetcher.fetchPicks();
 	});
 
+	// 刷新picks列表
+	let refreshNoteListCommand = vscode.commands.registerCommand('noted-api.refreshNoteList', async () => {
+
+		picks = pickFetcher.fetchPicks();
+	});
+
 	// 打开笔记
 	let openNoteAtCursorCommand = vscode.commands.registerCommand('noted-api.openNoteAtCursor', async () => {
 
@@ -97,6 +103,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(searchAPICommand);
 	context.subscriptions.push(chooseDocCommand);
 	context.subscriptions.push(createNewNoteCommand);
+	context.subscriptions.push(refreshNoteListCommand);
 	context.subscriptions.push(openNoteAtCursorCommand);
 	context.subscriptions.push(hoverProvider);
 	context.subscriptions.push(createNewDocCommand);

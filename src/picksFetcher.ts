@@ -88,7 +88,7 @@ export async function createNewNote(API: string) {
 		return;
 	}
 
-	fs.writeFileSync(noteDir, '**' + API + '**');
+	fs.writeFileSync(noteDir, '# ' + API);
 
 	vscode.window.showInformationMessage('笔记创建成功：' + API);
 	const doc = await vscode.workspace.openTextDocument(noteDir);
@@ -173,7 +173,7 @@ export async function openNoteOf(API: string) {
 	let noteDir = docDir + selectedDoc + '\\' + API + '.md';
 
 	if (fs.existsSync(noteDir) === false) {
-		fs.writeFileSync(noteDir, '**' + API + '**');
+		fs.writeFileSync(noteDir, '# ' + API);
 		vscode.window.showInformationMessage('笔记创建成功：' + API);
 	}
 
@@ -195,7 +195,7 @@ export function provideHover(document: vscode.TextDocument, position: vscode.Pos
 	let noteDir = docDir + selectedDoc + '\\' + API + '.md';
 
 	if (fs.existsSync(noteDir)) {
-		let data = fs.readFileSync(noteDir, 'utf-8');
+		let data = fs.readFileSync(noteDir, 'utf-8').substring(API.length + 2);
 
 		return new vscode.Hover(data);
 	}
